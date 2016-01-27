@@ -41,15 +41,9 @@ try:
     import platform
     from setuptools import setup
 
-    if platform.python_implementation() == 'PyPy' or\
-                      platform.system() == 'Windows':
-        crypto_lib = 'pycryptodome'
-    else:
-        crypto_lib = 'pycrypto >= 2.5'
-
     kw = {
         'install_requires': [
-            crypto_lib,
+            'pycryptodome',
             'ecdsa >= 0.11',
         ],
     }
